@@ -260,14 +260,23 @@ function parseData(jsondata){
 
   </script>
     <div id="resultdiv">
-      <h1 class="title">Vibes</h1>
+    <h1 class="title">
+                <span>V</span>
+                <span>i</span>
+                <span>b</span>
+                <span>e</span>
+                <span>s</span>
+    </h1>
       <h2 id="movietitle">&nbsp</h2>
     </div>
 
 
-    <div class="canvasdiv">
+    <div class="canvasdiv" id="canvas1">
       <h3 id="analyzing"> Analyzing...</h3>
     <canvas id="myChart"></canvas>
+    </div>
+    <div class="canvasdiv" id="canvas2">
+      <canvas id="myChart2"></canvas>
     </div>
   <script>
   function renderChart(){
@@ -330,19 +339,19 @@ function parseData(jsondata){
         options: {
             scales: {
               xAxes: [{
+                display: false,
                 stacked: true,
                 ticks: {
                 display: false
               }
               }],
                 yAxes: [{
+                  display: false,
                     ticks: {
-                        beginAtZero: true
+                        beginAtZero: true,
+                        display: false
                     },
-                    stacked: true,
-                    ticks: {
-                    display: false
-                    }
+                    stacked: true
                 }]
               }
             }
@@ -443,6 +452,7 @@ function parseData(jsondata){
 	      scaleShowLabels : false,
 	      scales: {
 	      xAxes: [{
+          display: false,
                 ticks: {
                     display: false //this will remove only the label
                 }
@@ -478,9 +488,9 @@ function parseData(jsondata){
                         display: true,
                         position: "right",
                         id: "y-axis-4",
-                        ticks: {
-                          display: false
-                        }
+                          ticks: {
+                            display: false
+                          }
                         },
                         {
                         type: "linear", // only linear but allow scale type registration. This allows extensions to exist solely for log scale for instance
@@ -515,6 +525,27 @@ function parseData(jsondata){
         });
 
 }
+  var graph = true;
+  function switchGraph(){
+    if(graph){
+      document.querySelector("#canvas1").style.display = "none";
+      document.querySelector("#canvas2").style.display = "block";
+      document.querySelector("#graphButton").innerText = "Show Bar Graph";
+    }
+    else{
+      document.querySelector("#canvas1").style.display = "block";
+      document.querySelector("#canvas2").style.display = "none";
+      document.querySelector("#graphButton").innerText = "Show Line Graph";
+    }
+    graph=!graph;
+  }
+
+  function myFunction(){
+    console.log("benis");
+  }
+  function backHome(){
+    window.location.replace("/");
+  }
   </script>
 
 <div id="percent">
@@ -526,11 +557,10 @@ function parseData(jsondata){
   <div id="cpercent" class="diffpercent"></div>
   <div id="tpercent" class="diffpercent"></div>
 </div>
-<div class="canvasdiv">
-  <canvas id="myChart2"></canvas>
-</div>
-<div id="buttondiv">
-  <a class="buttonclass" href="index.php">Back to Search</a>
+
+<div id="buttonWrapper">
+<button class="buttondiv" type="button" onclick="switchGraph()" id="graphButton">Show Line Graph</button>
+  <button class="buttondiv" type="button" onclick="backHome()">Back to Search</button>
 </div>
 
 </body>

@@ -1,6 +1,6 @@
 function search(){
     let query=document.getElementById("search").value;
-    document.getElementById("resultslist").innerHTML="";
+    hideAllLi();
     query=query.toLowerCase();
     query=query.replace(/ /g, "-");
     if(query.substr(0,3)==="the" && query!="the"){
@@ -26,14 +26,16 @@ function search(){
 function searchResults(matches){
   let query=document.getElementById("search").value;
   if(matches===undefined || matches.length==0 && query!=""){
-      document.getElementById("resultslist").innerHTML="<li>No Results for " + query+"</li>";
+      document.getElementById("noResult").style.display = "list-item";
+      document.getElementById("noResult2").innerHTML = "<img src=\"vibe_icon.png\" alt=\"Vibe\" width=\"40\" height=\"40\">No Results for " + query;
 
   }
   let display=[];
+    console.log(matches);
   //document.getElementById("resultslist").innerHTML=" ";
   for(i=0; i<matches.length; i++){
     display[i]=matches[i].replace(/-/g, " ");
-    document.getElementById("resultslist").innerHTML+="<li><a href=results.php?title="+matches[i]+"><img src=\"vibe_icon.png\" alt=\"Vibe\" width=\"40\" height=\"40\">"+display[i]+"</li>";
+    document.getElementById(matches[i].replace(/-/g, "")).style.display = "list-item";
   }
 }
 
@@ -43,6 +45,14 @@ function call(e) {
             e.preventDefault();
         }
     }
+}
+
+function hideAllLi(){
+  let li = document.querySelectorAll("li");
+
+  for(let x =0; x<li.length; x++){
+    li[x].style.display = "none";
+  }
 }
 
 
