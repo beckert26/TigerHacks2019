@@ -1,0 +1,239 @@
+body{
+  margin:0px;
+
+  background-color: black;
+  color: rgba(255,255,255, .9);
+  text-align: center;
+  font-family: "Open Sans"; 
+  
+   font-style: normal;
+  font-variant: normal;
+  font-weight: 700;
+  height: 100%;
+  width: 100%;
+}
+h1{
+  font-size: 60px;
+  margin-bottom: 17px;
+}
+.divsearch{
+  width: 92%;
+  height: 80px;
+  padding: 0px;
+  margin: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1px;
+  border-radius: 15px;
+  overflow:hidden;
+}
+#search {
+  padding: 10px;
+  padding-left: 20px;
+  font-size: 2pc;
+  height: 100%;
+  width: 80%;
+  float:left;
+  border: none;
+  outline:none;
+}
+#searchbutton{
+  padding:0px;
+  margin: 0px;
+  height: 80px;
+  width: 20%;
+  text-decoration: none;
+  font-size: 2pc;
+  border: none;
+  outline:none;
+}
+#searchbutton:hover{
+  background-color: rgba(255,255,255, .82);
+}
+#searchbutton:active{
+  background-color: rgba(255,255,255, .95);
+}
+
+ul{
+  margin-top:0px;
+}
+
+a{
+  color: black;
+}
+
+a:link {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+#buttondiv{
+  margin-top: 25px;
+  display: block;
+}
+#percent{
+  text-align: center;
+  -ms-text-justify: distribute-all-lines;
+  text-justify: distribute-all-lines;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  zoom: 1;
+  max-height: 18px;
+}
+
+#percent > .diffpercent{
+  padding: 1px;
+  height:20px;
+  overflow:hidden;
+}
+
+.diffpercent {
+  width: 10%;
+  vertical-align: top;
+  display: inline-block;
+  *display: inline;
+  border-radius: 3px;
+}
+#apercent{
+  border: 2px solid rgba(255, 0, 0, .8);
+  background-color: rgba(255, 0, 0, .3);
+}
+#fpercent{
+  border: 2px solid rgba(170, 0, 255, .8);
+  background-color: rgba(170, 0, 255, .3);
+}
+#jpercent{
+  border: 2px solid rgba(255, 235, 0, .8);
+  background-color: rgba(255, 235, 0, .3);
+}
+#spercent{
+  border: 2px solid rgba(0, 0, 255, .8);
+  background-color: rgba(0, 0, 255, .3);
+}
+#anpercent{
+  border: 2px solid rgba(0, 255, 230, .8);
+  background-color: rgba(0, 255, 230, .3);
+}
+#cpercent{
+  border: 2px solid rgba(255, 127, 0, .8);
+  background-color: rgba(255, 127, 0, .3);
+}
+#tpercent{
+  border: 2px solid rgba(0, 230, 64, .8);
+  background-color: rgba(0, 230, 64, .3);
+}
+
+.buttonclass {
+  text-decoration: none;
+  background-color: rgba(255,255,255, .9);
+  color: black;
+  font-size: 18px;
+  border-radius: 5px;
+  padding: 2px 6px 2px 6px;
+  border-top: 1px solid #CCCCCC;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #CCCCCC;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.canvasdiv{
+  width: 80%;
+  height: 70%;
+  text-align: center;
+  margin-left:auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+
+#searchWrapper{
+  height: 50%;
+  width:80%;
+  padding: 0px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-40%, -40%);
+  transform: translate(-50%, -55%);
+
+}
+
+.title{
+  font-size: 88px;
+  margin-top: 0px;
+  margin-bottom: 5px;
+  font-weight: 1000;
+}
+
+#searchResults{
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgba(255,255,255, .9);
+  color: black;
+  font-size: 2pc;
+  width: 92%;
+  max-height: 55%;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  overflow-y: scroll;
+  visibility: hidden;
+}
+
+#searchResults > ul{
+  margin-left: 5px;
+  padding: 0px;
+  font-size: 22px;
+  list-style-type: none;
+}
+
+#searchResults > ul > li{
+  margin:auto;
+  padding-top:5px;
+  padding-bottom:5px;
+  width:100%;
+}
+
+#searchResults > ul > li > a{
+  display:inline-block;
+  width:100%;
+  text-decoration: none;
+}
+
+#searchResults > ul > li > a > img{
+  vertical-align: middle;
+}
+
+
+#searchResults > ul > li:hover{
+  background-color: rgba(240, 240, 240, 0.8);
+}
+#searchResults > ul > li:active{
+  background-color:  rgba(255,255,255, .82);
+}

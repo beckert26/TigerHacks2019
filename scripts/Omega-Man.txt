@@ -1,0 +1,2 @@
+document.isTrellix = 1;
+Omega Man Script
